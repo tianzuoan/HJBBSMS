@@ -52,7 +52,7 @@ class MT4Config implements IConfig
         if (null==$file){
             if ('cli'==php_sapi_name()){
                 //命令行
-                $this->config_file=__DIR__.'/MT4.config.ini';
+                $this->config_file= __DIR__ . '/MT4.config.ini';
             }else{
                 $this->config_file=$_SERVER['DOCUMENT_ROOT'].'/config/MT4.config.ini';
             }

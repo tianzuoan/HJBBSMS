@@ -2,7 +2,7 @@
 
 ## **Overview 概述**
 
-   公司内部使用sdk
+   自己使用sdk
 
 ## **Usage 使用方法**
 
