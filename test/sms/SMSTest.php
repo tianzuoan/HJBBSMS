@@ -14,6 +14,7 @@ class SMSTest extends UnitTestCase
      * @var \HJ100\BBSMS\SMS $sms
      */
     private $sms;
+    private $number = '13813800138';
 
     function setUp()
     {
@@ -29,37 +30,37 @@ class SMSTest extends UnitTestCase
      */
     private function testSendTest()
     {
-        $re = $this->sms->sendTest('15302669338', 'tza');
+        $re = $this->sms->sendTest($this->number, 'tza');
         $this->assertEqual(\HJ100\BBSMS\SMSError::OK, $re->code);
     }
 
     private function testSendCommonCode()
     {
-        $re = $this->sms->sendCommonCode('15302669338');
+        $re = $this->sms->sendCommonCode($this->number);
         $this->assertEqual(\HJ100\BBSMS\SMSError::OK, $re->code);
     }
 
     private function testsendAuthenticateCode()
     {
-        $re = $this->sms->sendAuthenticateCode('15302669338');
+        $re = $this->sms->sendAuthenticateCode($this->number);
         $this->assertEqual(\HJ100\BBSMS\SMSError::OK, $re->code);
     }
 
     private function testsendLoginCode()
     {
-        $re = $this->sms->sendLoginCode('15302669338');
+        $re = $this->sms->sendLoginCode($this->number);
         $this->assertEqual(\HJ100\BBSMS\SMSError::OK, $re->code);
     }
 
-     function testsendRegisterCode()
+    function testsendRegisterCode()
     {
-        $re = $this->sms->sendRegisterCode('15302669338');
+        $re = $this->sms->sendRegisterCode($this->number);
         $this->assertEqual(\HJ100\BBSMS\SMSError::OK, $re->code);
     }
 
     private function testsendEditPasswordCode()
     {
-        $re = $this->sms->sendEditPasswordCode('15302669338');
+        $re = $this->sms->sendEditPasswordCode($this->number);
         $this->assertEqual(\HJ100\BBSMS\SMSError::OK, $re->code);
     }
 }

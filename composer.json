@@ -1,0 +1,12 @@
+{
+    "name": "hj100/bbsms",
+    "description": "a application package for BBSMS server servicee.It provide an entrance for message template.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "tian",
+            "email": "363387612@qq.com"
+        }
+    ],
+    "require": {}
+}
